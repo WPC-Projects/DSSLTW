@@ -70,8 +70,12 @@ login.addEventListener('click', (e) => {
     etxt.style.color = "#ec4846";
     Eerror.innerText = " - This is not a valid email address";
   }else{
-    email.value = "";
-    password.value = "";
+    const emailValue = email.value;
+    const passwordValue = password.value;
+    const data = {
+      email: emailValue,
+      password: passwordValue
+    }
     container.style.animation = "jump .3s linear";
     container.addEventListener('animationend', () => {
       container.style.display = "none";
